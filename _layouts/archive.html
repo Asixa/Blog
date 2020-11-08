@@ -20,10 +20,11 @@
 
                     <div class="col p-0">
 
-                        {% for post in page.posts %}
+                        {% for post in site.posts %}
+                        {% if post.tags[0] == page.title %}
                         {% assign date = post.date| date: "%b %-d, %Y" %}
                         {% include post-slot-large.html date=date  title=post.title url=post.url cover=post.cover%}
-
+                        {% endif %}
                         {% endfor %}
                         <div style="width:100%;height: 10rem;"></div>
 

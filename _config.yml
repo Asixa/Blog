@@ -43,8 +43,12 @@ contents:
   type: liquid
   path: /contents/
 
+collections:
+  tag:
+    output: true
+
 plugins:
-  - jekyll-archives
+ 
   - jekyll-paginate
 
 jekyll-archives:

@@ -5,7 +5,7 @@ cover: "images/projects/post/daily2.png"
 tags:
   - Blog
 category: Others
-tags: daliy
+tags: daily
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LLVM 快速入门"
-cover: "images/projects/post.png"
+cover: "images/projects/post/llvm.png"
 tags:
   - LLVM
   - Compiler
