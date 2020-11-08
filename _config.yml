@@ -48,7 +48,7 @@ collections:
     output: true
 
 plugins:
- 
+  - jekyll-compress-images
   - jekyll-paginate
 
 jekyll-archives:
@@ -61,3 +61,9 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
+compress_images:
+  images_path: "/images/**/*.{gif,png,jpg,jpeg,svg}"
+imageoptim:
+  pngout: true
+  svgo: true
+  verbose: false
