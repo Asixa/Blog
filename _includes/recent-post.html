@@ -1,0 +1,8 @@
+<div class="nt-recent-bg">
+    <h5 class="text-light mt-2" style="padding-left: 1.8rem">Recent Posts</h5>
+    <div class="l-container-recent">
+        {% for post in site.posts limit:5 %}
+        {%include post.html title=post.title cover=post.cover url=post.url%}
+        {% endfor %}
+    </div>
+</div>

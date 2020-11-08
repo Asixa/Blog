@@ -1,0 +1,29 @@
+<div class="sidebar text-light  p-2 nt-sidebar-layout">
+  <a href="{{ site.baseurl}}/" class='btn text-light text-left nt-home-btn'>Home</a>
+</div>
+
+
+<div class="sidebar text-light card m-2 p-2 nt-sidebar-search">
+  Search
+</div>
+
+
+
+{%for post in site.posts %}
+{% unless post.next %}
+<a class="text-light nt-foldout">{{ post.date | date: '%Y' }}</a>
+<div>
+  {% else %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+  {% if year != nyear %}
+</div>
+<a class="text-light nt-foldout">{{ post.date | date: '%Y' }}</a>
+<div>
+  {% endif %}
+  {% endunless %}
+  <a class=" nt-foldout-item" href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} -
+    {{ post.title }}</a>
+
+  {% endfor %}
+</div>

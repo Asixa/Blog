@@ -1,0 +1,47 @@
+{% include header.html %}
+
+
+<div class=" container-left " style="margin-top: 5rem !important;  ">
+    <div class="row nt-content">
+        <div class="col-md-2  hidden-xs nt-sidebar pr-0 ">
+            {% include sidebar.html %}
+        </div>
+        <div class="col pl-0">
+            <div class="mr-2" style="height: 95vh;overflow-y: scroll;overflow-x: hidden;">
+                <img style="width:100%; " src="{{ site.baseurl}}/images/projects/tags/{{%page.title%}}/banner.png">
+
+                <div class="pl-5 pr-5  row">
+                    <h1>{{ page.title | upcase}}</h1>
+                    <div class="btn-block  rounded btn-group" style="background-color:rgba(204, 204, 204, 0.13)">
+                        <button type="button" class="btn btn-secondary">Code</button>
+                        <button type="button" class="btn btn-secondary">Figure</button>
+                        <button type="button" class="btn btn-secondary">...</button>
+                    </div>
+
+                    <div class="col p-0">
+
+                        {% for post in page.posts %}
+                        {% assign date = post.date| date: "%b %-d, %Y" %}
+                        {% include post-slot-large.html date=date  title=post.title url=post.url cover=post.cover%}
+
+                        {% endfor %}
+                        <div style="width:100%;height: 10rem;"></div>
+
+                    </div>
+
+                    <div class="col-md-4 pr-0">
+                        <h5 class="text-light mt-4">Author</h5>
+                        <div class="btn-block text-light border border-dark nt-bg-transparent m-0 p-3">
+                            Xingyu
+                            Chen</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% include footer.html %}

@@ -1,0 +1,16 @@
+<div style="height:10px;width: 100%; border-top: 3px solid rgb(55, 60, 68);">
+    <h5 class="text-light mt-2" style="padding-left: 1.8rem">{{include.title}}</h5>
+</div>
+<div class="l-container">
+    {% capture tags %}
+    {% for post in site.categories[include.title] %}
+    {{post.tags[0]}}
+    {% endfor %}
+    {% endcapture %}
+
+    {% assign tags = tags | split: ' '| uniq %}
+    {% for post in tags  %}
+    {%include card.html tag=post %}
+    {% endfor %}
+
+</div>

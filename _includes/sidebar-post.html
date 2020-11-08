@@ -1,0 +1,20 @@
+<div class="sidebar text-light  p-2 nt-sidebar-layout">
+  <a href="{{ site.baseurl}}/tag/{{page.tags[0]}}/" class='btn text-light text-left nt-home-btn'>⬅
+    {{page.tags[0]| upcase}}</a>
+</div>
+
+
+<div class="sidebar text-light card m-2 p-2 nt-sidebar-search">
+  Search
+</div>
+
+<a class="text-light">{{site.tags[page.tags]}}</a>
+<ul></ul>
+{%for post in site.posts %}
+{% if post.tags == page.tags %}
+<a class="text-light nt-foldout-item" href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} -
+  {{ post.title }}</a>
+{% endif %}
+
+{% endfor %}
+</ul>
