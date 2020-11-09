@@ -10,8 +10,10 @@ layout: default
 
   {% for category in site.categories %}
   {% capture category_name %}{{ category[0] }}{% endcapture %}
+  {% if category_name !="Others"%}
   {%include card-group.html title=category_name  %}
+  {% endif %}
   {% endfor %}
-
+  {%include card-group.html title="Others"  %}
 
 </div>

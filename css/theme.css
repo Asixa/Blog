@@ -147,6 +147,7 @@ li {
 .nt-sidebar{
     background-color:rgb(36, 40, 47);
     border-right: 3px solid rgb(23, 25, 27); 
+    min-width:300px;
 }
 .nt-sidebar-sub{
 position: fixed;

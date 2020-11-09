@@ -47,9 +47,6 @@ collections:
   tag:
     output: true
 
-plugins:
-  - jekyll-compress-images
-  - jekyll-paginate
 
 jekyll-archives:
   enabled: 
